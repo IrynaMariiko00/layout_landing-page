@@ -1,17 +1,31 @@
 .icon {
   height: 24px;
   width: 24px;
-  display: block;
-}
+  display: flex;
+  background-image: url(./images/Icon-Burger-menu.png);
+  background-size: cover;
 
-.icon--phone {
-  background-image: url(/images/Phone-number.png);
-}
+  @include hover(transform, scale(1.2));
 
-.icon--menu {
-  background-image: url(/images/Icon-Burger-menu.png);
-}
+  @include on-tablet {
+    height: 32px;
+    width: 32px;
+  }
 
-.icon--close {
-  background-image: url(/images/Icon-Close.png);
+  &--phone {
+    background-image: url(./images/Phone-number.png);
+  }
+
+  &--menu {
+    background-image: url(./images/Icon-Burger-menu.png);
+
+
+    &:hover {
+      background-image: url(./images/Icon-Burger-menu-hover.png);
+    }
+  }
+
+  &--close {
+    background-image: url(./images/Icon-Close.png);
+  }
 }

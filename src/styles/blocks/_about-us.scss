@@ -1,0 +1,50 @@
+.about-us {
+  background-color: $about-us-background-color;
+
+  &__image {
+    background-image: url();
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    height: 200px;
+
+    @include on-tablet {
+      height: 400px;
+    }
+
+    @include on-desktop {
+      height: 460px;
+    }
+  }
+
+  &__content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @include page-grid;
+
+    @include on-tablet {
+      padding-block: 120px;
+    }
+  }
+
+  &__title {
+    @include grid-columns(span 2, span 3, span 6);
+
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 24px;
+    letter-spacing: 0.15px;
+
+    @include on-tablet {
+      padding-bottom: 0;
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    @include grid-columns(span 2, span 3, span 5 / -1);
+  }
+}
+
